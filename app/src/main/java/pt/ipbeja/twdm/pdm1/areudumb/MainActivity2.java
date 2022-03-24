@@ -26,9 +26,8 @@ public class MainActivity2 extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
             ImageView imageView = findViewById(R.id.imageView);
             imageView.setImageBitmap(imageBitmap);
-        } else if (requestCode == 1000 && resultCode == RESULT_CANCELED) {
-            // TODO feedback
+
+            super.onActivityResult(requestCode, resultCode, data);
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 }
